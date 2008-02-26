@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+eindhoven:
+  id: 1
+  name: Eindhoven
+
+breda:
+  id: 2
+  name: Breda

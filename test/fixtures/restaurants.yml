@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+javaanseetcafe:
+  name: Javaans Eetcafe
+  pricing: 2
+  rating: 4
+  food_type_id: 1
+  city_id: 1
+
+spoon:
+  name: Spoon
+  pricing: 3
+  rating: 3
+  food_type_id: 2
+  city_id: 1

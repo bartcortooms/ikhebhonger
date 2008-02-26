@@ -1,0 +1,13 @@
+#!/usr/bin/env /hosting/home/hiccup/www/eten.hiccup.nl/script/runner
+
+Restaurant::find(:all).each do |restaurant|
+	(lat, lon) = restaurant.geocoordinates
+	if lat == 0 or lon == 0
+		printf "Geocoordinates #{restaurant.name} outdated... "
+		#(restaurant.lat, restaurant.lon) = restaurant.fetch_geocoordinates
+
+		#if restaurant.save
+			puts "updated"
+		#end
+	end
+end

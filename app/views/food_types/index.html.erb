@@ -1,0 +1,13 @@
+<% content_for :actions do %>
+  <li><%= link_to 'Nieuwe keuken', new_food_type_path %></li>
+<% end %>
+
+<h1>Keukens</h1>
+
+<ul>
+<% for food_type in @food_types %>
+  <li>
+    <a href='<%= url_for(:controller => "restaurants", :action => 'index', :food_type_id => food_type.id) %>'><%= food_type %></a>
+  </li>
+<% end %>
+</ul>

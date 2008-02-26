@@ -1,0 +1,44 @@
+<% content_for :actions do %>
+	<li><%= link_to 'Show', @restaurant %></li>
+	<li><%= link_to 'Delete', @restaurant, :confirm => 'Are you sure?', :method => :delete %></li>
+<% end %>
+
+<h1>Editing restaurant</h1>
+
+<%= error_messages_for :restaurant %>
+
+<% form_for(@restaurant) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Pricing</b><br />
+    <%= f.text_field :pricing %>
+  </p>
+
+  <p>
+    <b>Rating</b><br />
+    <%= f.text_field :rating %>
+  </p>
+
+  <p>
+    <b>Foodtype</b><br />
+    <%= f.collection_select :food_type_id, FoodType::find(:all), :id, :name, :include_blank => true %>
+  </p>
+
+  <p>
+    <b>City</b><br />
+    <%= f.collection_select :city_id, City::find(:all), :id, :name %>
+  </p>
+
+  <p>
+    <b>Homepage</b><br />
+    <%= f.text_field :homepage %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>

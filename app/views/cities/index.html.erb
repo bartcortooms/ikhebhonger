@@ -1,0 +1,13 @@
+<h1>Steden</h1>
+
+<% content_for :actions do %>
+  <li><%= link_to 'Nieuwe stad', new_city_path %></li>
+<% end %>
+
+<ul>
+<% for city in @cities %>
+  <li>
+    <a href='<%= url_for(:controller => "restaurants", :action => 'index', :city_id => city.id) %>'><%= city %></a>
+  </li>
+<% end %>
+</ul>

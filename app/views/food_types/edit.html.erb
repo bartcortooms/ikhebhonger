@@ -1,0 +1,17 @@
+<h1>Editing food_type</h1>
+
+<%= error_messages_for :food_type %>
+
+<% form_for(@food_type) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @food_type %> |
+<%= link_to 'Back', food_types_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+indonesisch:
+  id: 1
+  name: Indonesisch
+
+aziatisch:
+  id: 2
+  name: Aziatisch
+
+frans:
+  id: 3
+  name: Frans

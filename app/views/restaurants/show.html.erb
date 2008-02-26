@@ -1,0 +1,49 @@
+<% content_for :map do %>
+	<%= GMap.header %>
+	<%= @map.to_html %>
+<% end %>
+
+<% content_for :actions do %>
+	<li><%= link_to 'Bewerk', edit_restaurant_path(@restaurant) %></li>
+	<li><%= link_to 'Verwijder', @restaurant, :confirm => 'Are you sure?', :method => :delete %></li>
+<% end %>
+
+<div class='gradient'>
+	<h1><%=h @restaurant.name %></h1>
+
+	<p>
+	<table>
+	<tr>
+	  <th>Pricing:</th>
+	  <td><%=h @restaurant.pricing %></td>
+	</tr>
+
+	<tr>
+	  <th>Rating:</th>
+	  <td><%=h @restaurant.rating %></td>
+	</tr>
+
+	<tr>
+	  <th>Homepage:</th>
+	  <td><%= link_to @restaurant.homepage, @restaurant.homepage %></td>
+	</tr>
+
+	<tr>
+	  <th>Foodtype:</th>
+	  <td><%=h @restaurant.food_type %></td>
+	</tr>
+
+	<tr>
+	  <th>City:</th>
+	  <td><%=h @restaurant.city %></td>
+	</tr>
+
+	<tr>
+	  <th>Address:</th>
+	  <td><%= @restaurant.address %></td>
+	</tr>
+	</table>
+	</p>
+</div>
+
+<%= @map.div(:width => 550, :height => 400) %>

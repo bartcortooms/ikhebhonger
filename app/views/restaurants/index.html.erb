@@ -1,0 +1,34 @@
+<% content_for :map do %>
+  <%= GMap.header %>
+  <%= @map.to_html %>
+<% end %>
+
+<% content_for :actions do %>
+  <li><%= link_to 'Nieuw restaurant', new_restaurant_path %></li>
+<% end %>
+
+<h1>Restaurants</h1>
+
+<p>
+<%= @map.div(:width => 620, :height => 500) %>
+</p>
+
+<table class='gradient'>
+  <tr>
+    <th>Name</th>
+    <th>Pricing</th>
+    <th>Rating</th>
+    <th>Foodtype</th>
+    <th>City</th>
+  </tr>
+
+<% for restaurant in @restaurants %>
+  <tr>
+    <td><%= link_to restaurant.name, restaurant %></td>
+    <td><%=h restaurant.pricing %></td>
+    <td><%=h restaurant.rating %></td>
+    <td><a href='<%= url_for(:controller => "restaurants", :action => "index", :food_type_id => restaurant.food_type.id) %>'><%= restaurant.food_type %></a></td>
+    <td><a href='<%= url_for(:controller => "restaurants", :action => "index", :city_id => restaurant.city.id) %>'><%= restaurant.city %></a></td>
+  </tr>
+<% end %>
+</table>

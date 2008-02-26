@@ -1,0 +1,737 @@
+  [4;36;1mSQL (0.000427)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+
+
+Processing CitiesController#create (for 0.0.0.0 at 2008-01-27 18:42:23) [POST]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"create", "controller"=>"cities"}
+  [4;35;1mCity Create (0.000356)[0m   [0mINSERT INTO cities ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:42:23', '2008-01-27 18:42:23')[0m
+Redirected to http://test.host/cities/3
+Completed in 0.00828 (120 reqs/sec) | DB: 0.00078 (9%) | 302 Found [http://test.host/cities?]
+  [4;36;1mSQL (0.000295)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+  [4;35;1mSQL (0.000339)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000382)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#destroy (for 0.0.0.0 at 2008-01-27 18:42:23) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000397)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;36;1mCity Destroy (0.000211)[0m   [0;1m DELETE FROM cities
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/cities
+Completed in 0.00204 (491 reqs/sec) | DB: 0.00162 (79%) | 302 Found [http://test.host/cities/1]
+  [4;35;1mSQL (0.000267)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000389)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#edit (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000376)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/edit
+Completed in 0.00558 (179 reqs/sec) | Rendering: 0.00463 (83%) | DB: 0.00103 (18%) | 200 OK [http://test.host/cities/1/edit]
+
+
+Processing CitiesController#index (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000580)[0m   [0;1mSELECT * FROM cities [0m
+Rendering template within layouts/cities
+Rendering cities/index
+Completed in 0.00441 (226 reqs/sec) | Rendering: 0.00295 (66%) | DB: 0.00058 (13%) | 200 OK [http://test.host/cities]
+
+
+Processing CitiesController#new (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"cities"}
+Rendering template within layouts/cities
+Rendering cities/new
+Completed in 0.00346 (289 reqs/sec) | Rendering: 0.00292 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/cities/new]
+  [4;35;1mCity Load (0.000414)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#show (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000365)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/show
+Completed in 0.00300 (333 reqs/sec) | Rendering: 0.00178 (59%) | DB: 0.00078 (25%) | 200 OK [http://test.host/cities/1]
+  [4;35;1mCity Load (0.000442)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#update (for 0.0.0.0 at 2008-01-27 18:42:23) [PUT]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"update", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000366)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;35;1mCity Update (0.000252)[0m   [0mUPDATE cities SET "created_at" = '2008-01-27 18:42:23', "name" = 'Eindhoven', "updated_at" = '2008-01-27 18:42:23' WHERE "id" = 1[0m
+Redirected to http://test.host/cities/1
+Completed in 0.00288 (347 reqs/sec) | DB: 0.00106 (36%) | 302 Found [http://test.host/cities/1?]
+  [4;36;1mSQL (0.000332)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#create (for 0.0.0.0 at 2008-01-27 18:42:23) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"food_types", "food_type"=>{}}
+  [4;35;1mFoodType Create (0.000283)[0m   [0mINSERT INTO food_types ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:42:23', '2008-01-27 18:42:23')[0m
+Redirected to http://test.host/food_types/4
+Completed in 0.00709 (141 reqs/sec) | DB: 0.00061 (8%) | 302 Found [http://test.host/food_types?]
+  [4;36;1mSQL (0.000272)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+  [4;35;1mSQL (0.000295)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#index (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000690)[0m   [0;1mSELECT * FROM food_types [0m
+Rendering template within layouts/food_types
+Rendering food_types/index
+Completed in 0.00621 (161 reqs/sec) | Rendering: 0.00455 (73%) | DB: 0.00126 (20%) | 200 OK [http://test.host/food_types]
+
+
+Processing FoodTypesController#new (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"food_types"}
+Rendering template within layouts/food_types
+Rendering food_types/new
+Completed in 0.00345 (289 reqs/sec) | Rendering: 0.00291 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/food_types/new]
+  [4;35;1mSQL (0.000356)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+
+
+Processing RestaurantsController#create (for 0.0.0.0 at 2008-01-27 18:42:23) [POST]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"create", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Create (0.000300)[0m   [0;1mINSERT INTO restaurants ("name", "rating", "updated_at", "city_id", "food_type_id", "created_at", "pricing") VALUES('''NULL''', 0, '2008-01-27 18:42:23', 0, 0, '2008-01-27 18:42:23', 0)[0m
+Redirected to http://test.host/restaurants/996332878
+Completed in 0.00797 (125 reqs/sec) | DB: 0.00066 (8%) | 302 Found [http://test.host/restaurants?]
+  [4;35;1mSQL (0.000268)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;35;1mRestaurant Load (0.000492)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+
+
+Processing RestaurantsController#destroy (for 0.0.0.0 at 2008-01-27 18:42:23) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000502)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+  [4;35;1mRestaurant Destroy (0.000193)[0m   [0m DELETE FROM restaurants
+ WHERE "id" = 953125641
+[0m
+Redirected to http://test.host/restaurants
+Completed in 0.00206 (486 reqs/sec) | DB: 0.00173 (84%) | 302 Found [http://test.host/restaurants/953125641]
+  [4;36;1mSQL (0.000251)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;35;1mRestaurant Load (0.000512)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+
+
+Processing RestaurantsController#edit (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000490)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/edit
+  [4;35;1mFoodType Load (0.000731)[0m   [0mSELECT * FROM food_types [0m
+  [4;36;1mCity Load (0.000490)[0m   [0;1mSELECT * FROM cities [0m
+Completed in 0.00921 (108 reqs/sec) | Rendering: 0.00692 (75%) | DB: 0.00247 (26%) | 200 OK [http://test.host/restaurants/953125641/edit]
+
+
+Processing RestaurantsController#index (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000781)[0m   [0mSELECT * FROM restaurants [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+Completed in 0.00508 (196 reqs/sec) | Rendering: 0.00339 (66%) | DB: 0.00078 (15%) | 200 OK [http://test.host/restaurants]
+
+
+Processing RestaurantsController#new (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"restaurants"}
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+  [4;36;1mFoodType Load (0.000793)[0m   [0;1mSELECT * FROM food_types [0m
+  [4;35;1mCity Load (0.000517)[0m   [0mSELECT * FROM cities [0m
+Completed in 0.00738 (135 reqs/sec) | Rendering: 0.00551 (74%) | DB: 0.00131 (17%) | 200 OK [http://test.host/restaurants/new]
+  [4;36;1mRestaurant Load (0.000567)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+
+
+Processing RestaurantsController#show (for 0.0.0.0 at 2008-01-27 18:42:23) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000542)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 0.00406 (246 reqs/sec) | Rendering: 0.00254 (62%) | DB: 0.00111 (27%) | 200 OK [http://test.host/restaurants/953125641]
+  [4;36;1mRestaurant Load (0.000544)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+
+
+Processing RestaurantsController#update (for 0.0.0.0 at 2008-01-27 18:42:23) [PUT]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"update", "id"=>"953125641", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000550)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 953125641) [0m
+  [4;36;1mRestaurant Update (0.000251)[0m   [0;1mUPDATE restaurants SET "created_at" = '2008-01-27 18:42:23', "city_id" = 1, "name" = 'Javaans Eetcafe', "food_type_id" = 1, "rating" = 4, "pricing" = 2, "updated_at" = '2008-01-27 18:42:23' WHERE "id" = 953125641[0m
+Redirected to http://test.host/restaurants/953125641
+Completed in 0.00333 (300 reqs/sec) | DB: 0.00134 (40%) | 302 Found [http://test.host/restaurants/953125641?]
+  [4;36;1mSQL (0.000437)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+
+
+Processing CitiesController#create (for 0.0.0.0 at 2008-01-27 18:44:06) [POST]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"create", "controller"=>"cities"}
+  [4;35;1mCity Create (0.000412)[0m   [0mINSERT INTO cities ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:44:06', '2008-01-27 18:44:06')[0m
+Redirected to http://test.host/cities/3
+Completed in 0.00852 (117 reqs/sec) | DB: 0.00085 (9%) | 302 Found [http://test.host/cities?]
+  [4;36;1mSQL (0.000318)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+  [4;35;1mSQL (0.000330)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000381)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#destroy (for 0.0.0.0 at 2008-01-27 18:44:06) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000386)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;36;1mCity Destroy (0.000208)[0m   [0;1m DELETE FROM cities
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/cities
+Completed in 0.00200 (498 reqs/sec) | DB: 0.00162 (80%) | 302 Found [http://test.host/cities/1]
+  [4;35;1mSQL (0.000263)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000388)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#edit (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000373)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/edit
+Completed in 0.00565 (176 reqs/sec) | Rendering: 0.00471 (83%) | DB: 0.00102 (18%) | 200 OK [http://test.host/cities/1/edit]
+
+
+Processing CitiesController#index (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000576)[0m   [0;1mSELECT * FROM cities [0m
+Rendering template within layouts/cities
+Rendering cities/index
+Completed in 0.00443 (225 reqs/sec) | Rendering: 0.00295 (66%) | DB: 0.00058 (12%) | 200 OK [http://test.host/cities]
+
+
+Processing CitiesController#new (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"cities"}
+Rendering template within layouts/cities
+Rendering cities/new
+Completed in 0.00337 (296 reqs/sec) | Rendering: 0.00283 (83%) | DB: 0.00000 (0%) | 200 OK [http://test.host/cities/new]
+  [4;35;1mCity Load (0.000419)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#show (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000359)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/show
+Completed in 0.00299 (334 reqs/sec) | Rendering: 0.00178 (59%) | DB: 0.00078 (26%) | 200 OK [http://test.host/cities/1]
+  [4;35;1mCity Load (0.000450)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#update (for 0.0.0.0 at 2008-01-27 18:44:06) [PUT]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"update", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000364)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;35;1mCity Update (0.000250)[0m   [0mUPDATE cities SET "created_at" = '2008-01-27 18:44:06', "name" = 'Eindhoven', "updated_at" = '2008-01-27 18:44:06' WHERE "id" = 1[0m
+Redirected to http://test.host/cities/1
+Completed in 0.00287 (348 reqs/sec) | DB: 0.00106 (37%) | 302 Found [http://test.host/cities/1?]
+  [4;36;1mSQL (0.000333)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#create (for 0.0.0.0 at 2008-01-27 18:44:06) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"food_types", "food_type"=>{}}
+  [4;35;1mFoodType Create (0.000285)[0m   [0mINSERT INTO food_types ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:44:06', '2008-01-27 18:44:06')[0m
+Redirected to http://test.host/food_types/4
+Completed in 0.00720 (138 reqs/sec) | DB: 0.00062 (8%) | 302 Found [http://test.host/food_types?]
+  [4;36;1mSQL (0.000269)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#index (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000686)[0m   [0;1mSELECT * FROM food_types [0m
+Rendering template within layouts/food_types
+Rendering food_types/index
+Completed in 0.00618 (161 reqs/sec) | Rendering: 0.00458 (74%) | DB: 0.00123 (19%) | 200 OK [http://test.host/food_types]
+
+
+Processing FoodTypesController#new (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"food_types"}
+Rendering template within layouts/food_types
+Rendering food_types/new
+Completed in 0.00348 (287 reqs/sec) | Rendering: 0.00295 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/food_types/new]
+  [4;35;1mSQL (0.000337)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+
+
+Processing RestaurantsController#create (for 0.0.0.0 at 2008-01-27 18:44:06) [POST]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"create", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Create (0.000293)[0m   [0;1mINSERT INTO restaurants ("name", "rating", "updated_at", "city_id", "food_type_id", "created_at", "pricing") VALUES('''NULL''', 0, '2008-01-27 18:44:06', 0, 0, '2008-01-27 18:44:06', 0)[0m
+Redirected to http://test.host/restaurants/812724245
+Completed in 0.00797 (125 reqs/sec) | DB: 0.00063 (7%) | 302 Found [http://test.host/restaurants?]
+  [4;35;1mSQL (0.000271)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mSQL (0.000282)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+
+
+Processing RestaurantsController#index (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000774)[0m   [0mSELECT * FROM restaurants [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+Completed in 0.00645 (154 reqs/sec) | Rendering: 0.00476 (73%) | DB: 0.00133 (20%) | 200 OK [http://test.host/restaurants]
+
+
+Processing RestaurantsController#new (for 0.0.0.0 at 2008-01-27 18:44:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"restaurants"}
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+  [4;36;1mFoodType Load (0.000833)[0m   [0;1mSELECT * FROM food_types [0m
+  [4;35;1mCity Load (0.000488)[0m   [0mSELECT * FROM cities [0m
+Completed in 0.00746 (133 reqs/sec) | Rendering: 0.00554 (74%) | DB: 0.00132 (17%) | 200 OK [http://test.host/restaurants/new]
+  [4;36;1mSQL (0.000438)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+
+
+Processing CitiesController#create (for 0.0.0.0 at 2008-01-27 18:44:58) [POST]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"create", "controller"=>"cities"}
+  [4;35;1mCity Create (0.000369)[0m   [0mINSERT INTO cities ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:44:58', '2008-01-27 18:44:58')[0m
+Redirected to http://test.host/cities/3
+Completed in 0.00829 (120 reqs/sec) | DB: 0.00081 (9%) | 302 Found [http://test.host/cities?]
+  [4;36;1mSQL (0.000305)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+  [4;35;1mSQL (0.000330)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000389)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#destroy (for 0.0.0.0 at 2008-01-27 18:44:58) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000389)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;36;1mCity Destroy (0.000210)[0m   [0;1m DELETE FROM cities
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/cities
+Completed in 0.00195 (512 reqs/sec) | DB: 0.00162 (83%) | 302 Found [http://test.host/cities/1]
+  [4;35;1mSQL (0.000265)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000395)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#edit (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000443)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/edit
+Completed in 0.00558 (179 reqs/sec) | Rendering: 0.00457 (81%) | DB: 0.00110 (19%) | 200 OK [http://test.host/cities/1/edit]
+
+
+Processing CitiesController#index (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000579)[0m   [0;1mSELECT * FROM cities [0m
+Rendering template within layouts/cities
+Rendering cities/index
+Completed in 0.00443 (225 reqs/sec) | Rendering: 0.00297 (67%) | DB: 0.00058 (13%) | 200 OK [http://test.host/cities]
+
+
+Processing CitiesController#new (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"cities"}
+Rendering template within layouts/cities
+Rendering cities/new
+Completed in 0.00342 (291 reqs/sec) | Rendering: 0.00289 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/cities/new]
+  [4;35;1mCity Load (0.000429)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#show (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000369)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/show
+Completed in 0.00294 (340 reqs/sec) | Rendering: 0.00171 (58%) | DB: 0.00080 (27%) | 200 OK [http://test.host/cities/1]
+  [4;35;1mCity Load (0.000395)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#update (for 0.0.0.0 at 2008-01-27 18:44:58) [PUT]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"update", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000368)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;35;1mCity Update (0.000248)[0m   [0mUPDATE cities SET "created_at" = '2008-01-27 18:44:58', "name" = 'Eindhoven', "updated_at" = '2008-01-27 18:44:58' WHERE "id" = 1[0m
+Redirected to http://test.host/cities/1
+Completed in 0.00290 (345 reqs/sec) | DB: 0.00101 (34%) | 302 Found [http://test.host/cities/1?]
+  [4;36;1mSQL (0.000332)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#create (for 0.0.0.0 at 2008-01-27 18:44:58) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"food_types", "food_type"=>{}}
+  [4;35;1mFoodType Create (0.000288)[0m   [0mINSERT INTO food_types ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:44:58', '2008-01-27 18:44:58')[0m
+Redirected to http://test.host/food_types/4
+Completed in 0.00712 (140 reqs/sec) | DB: 0.00062 (8%) | 302 Found [http://test.host/food_types?]
+  [4;36;1mSQL (0.000273)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+  [4;35;1mSQL (0.000291)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+  [4;36;1mFoodType Load (0.000344)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#destroy (for 0.0.0.0 at 2008-01-27 18:44:58) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"food_types"}
+  [4;35;1mFoodType Load (0.000371)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+  [4;36;1mFoodType Destroy (0.000196)[0m   [0;1m DELETE FROM food_types
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/food_types
+Completed in 0.00183 (546 reqs/sec) | DB: 0.00147 (80%) | 302 Found [http://test.host/food_types/1]
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+  [4;36;1mFoodType Load (0.000378)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#edit (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"food_types"}
+  [4;35;1mFoodType Load (0.000362)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+Rendering template within layouts/food_types
+Rendering food_types/edit
+Completed in 0.00534 (187 reqs/sec) | Rendering: 0.00435 (81%) | DB: 0.00099 (18%) | 200 OK [http://test.host/food_types/1/edit]
+
+
+Processing FoodTypesController#index (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000741)[0m   [0;1mSELECT * FROM food_types [0m
+Rendering template within layouts/food_types
+Rendering food_types/index
+Completed in 0.00499 (200 reqs/sec) | Rendering: 0.00329 (65%) | DB: 0.00074 (14%) | 200 OK [http://test.host/food_types]
+
+
+Processing FoodTypesController#new (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"food_types"}
+Rendering template within layouts/food_types
+Rendering food_types/new
+Completed in 0.00351 (284 reqs/sec) | Rendering: 0.00297 (84%) | DB: 0.00000 (0%) | 200 OK [http://test.host/food_types/new]
+  [4;35;1mFoodType Load (0.000425)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#show (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000368)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+Rendering template within layouts/food_types
+Rendering food_types/show
+Completed in 0.00291 (343 reqs/sec) | Rendering: 0.00169 (58%) | DB: 0.00079 (27%) | 200 OK [http://test.host/food_types/1]
+  [4;35;1mFoodType Load (0.000389)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#update (for 0.0.0.0 at 2008-01-27 18:44:58) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"food_types", "food_type"=>{}}
+  [4;36;1mFoodType Load (0.000369)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+  [4;35;1mFoodType Update (0.000234)[0m   [0mUPDATE food_types SET "created_at" = '2008-01-27 18:44:58', "name" = 'Indonesisch', "updated_at" = '2008-01-27 18:44:58' WHERE "id" = 1[0m
+Redirected to http://test.host/food_types/1
+Completed in 0.00286 (350 reqs/sec) | DB: 0.00099 (34%) | 302 Found [http://test.host/food_types/1?]
+  [4;36;1mSQL (0.000329)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+
+
+Processing RestaurantsController#create (for 0.0.0.0 at 2008-01-27 18:44:58) [POST]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"create", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Create (0.000298)[0m   [0mINSERT INTO restaurants ("name", "rating", "updated_at", "city_id", "food_type_id", "created_at", "pricing") VALUES('''NULL''', 0, '2008-01-27 18:44:58', 0, 0, '2008-01-27 18:44:58', 0)[0m
+Redirected to http://test.host/restaurants/812724245
+Completed in 0.00814 (122 reqs/sec) | DB: 0.00063 (7%) | 302 Found [http://test.host/restaurants?]
+  [4;36;1mSQL (0.000271)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;35;1mSQL (0.000308)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mRestaurant Load (0.000496)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#destroy (for 0.0.0.0 at 2008-01-27 18:44:58) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000503)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+  [4;36;1mRestaurant Destroy (0.000196)[0m   [0;1m DELETE FROM restaurants
+ WHERE "id" = 812724244
+[0m
+Redirected to http://test.host/restaurants
+Completed in 0.00199 (501 reqs/sec) | DB: 0.00177 (88%) | 302 Found [http://test.host/restaurants/812724244]
+  [4;35;1mSQL (0.000251)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mRestaurant Load (0.000587)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#edit (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000508)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/edit
+  [4;36;1mFoodType Load (0.000763)[0m   [0;1mSELECT * FROM food_types [0m
+  [4;35;1mCity Load (0.000523)[0m   [0mSELECT * FROM cities [0m
+Completed in 0.00954 (104 reqs/sec) | Rendering: 0.00715 (74%) | DB: 0.00263 (27%) | 200 OK [http://test.host/restaurants/812724244/edit]
+
+
+Processing RestaurantsController#index (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000797)[0m   [0;1mSELECT * FROM restaurants [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+Completed in 0.00525 (190 reqs/sec) | Rendering: 0.00349 (66%) | DB: 0.00080 (15%) | 200 OK [http://test.host/restaurants]
+
+
+Processing RestaurantsController#new (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"restaurants"}
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+  [4;35;1mFoodType Load (0.000795)[0m   [0mSELECT * FROM food_types [0m
+  [4;36;1mCity Load (0.000509)[0m   [0;1mSELECT * FROM cities [0m
+Completed in 0.00746 (134 reqs/sec) | Rendering: 0.00556 (74%) | DB: 0.00130 (17%) | 200 OK [http://test.host/restaurants/new]
+  [4;35;1mRestaurant Load (0.000541)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#show (for 0.0.0.0 at 2008-01-27 18:44:58) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000510)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 0.00391 (255 reqs/sec) | Rendering: 0.00247 (63%) | DB: 0.00105 (26%) | 200 OK [http://test.host/restaurants/812724244]
+  [4;35;1mRestaurant Load (0.000536)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#update (for 0.0.0.0 at 2008-01-27 18:44:58) [PUT]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"update", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000505)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+  [4;35;1mRestaurant Update (0.000244)[0m   [0mUPDATE restaurants SET "created_at" = '2008-01-27 18:44:58', "city_id" = 1, "name" = 'Javaans Eetcafe', "food_type_id" = 1, "rating" = 4, "pricing" = 2, "updated_at" = '2008-01-27 18:44:58' WHERE "id" = 812724244[0m
+Redirected to http://test.host/restaurants/812724244
+Completed in 0.00330 (303 reqs/sec) | DB: 0.00129 (38%) | 302 Found [http://test.host/restaurants/812724244?]
+  [4;36;1mSQL (0.000439)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+
+
+Processing CitiesController#create (for 0.0.0.0 at 2008-01-27 18:45:06) [POST]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"create", "controller"=>"cities"}
+  [4;35;1mCity Create (0.000407)[0m   [0mINSERT INTO cities ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:45:06', '2008-01-27 18:45:06')[0m
+Redirected to http://test.host/cities/3
+Completed in 0.01546 (64 reqs/sec) | DB: 0.00085 (5%) | 302 Found [http://test.host/cities?]
+  [4;36;1mSQL (0.000315)[0m   [0;1mSELECT count(*) AS count_all FROM cities [0m
+  [4;35;1mSQL (0.000349)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000380)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#destroy (for 0.0.0.0 at 2008-01-27 18:45:06) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000389)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;36;1mCity Destroy (0.000219)[0m   [0;1m DELETE FROM cities
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/cities
+Completed in 0.00197 (506 reqs/sec) | DB: 0.00165 (83%) | 302 Found [http://test.host/cities/1]
+  [4;35;1mSQL (0.000266)[0m   [0mSELECT count(*) AS count_all FROM cities [0m
+  [4;36;1mCity Load (0.000391)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#edit (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"cities"}
+  [4;35;1mCity Load (0.000377)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/edit
+Completed in 0.00556 (179 reqs/sec) | Rendering: 0.00461 (82%) | DB: 0.00103 (18%) | 200 OK [http://test.host/cities/1/edit]
+
+
+Processing CitiesController#index (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000589)[0m   [0;1mSELECT * FROM cities [0m
+Rendering template within layouts/cities
+Rendering cities/index
+Completed in 0.00446 (224 reqs/sec) | Rendering: 0.00296 (66%) | DB: 0.00059 (13%) | 200 OK [http://test.host/cities]
+
+
+Processing CitiesController#new (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"cities"}
+Rendering template within layouts/cities
+Rendering cities/new
+Completed in 0.00339 (294 reqs/sec) | Rendering: 0.00284 (83%) | DB: 0.00000 (0%) | 200 OK [http://test.host/cities/new]
+  [4;35;1mCity Load (0.000425)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#show (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000365)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+Rendering template within layouts/cities
+Rendering cities/show
+Completed in 0.00295 (338 reqs/sec) | Rendering: 0.00173 (58%) | DB: 0.00079 (26%) | 200 OK [http://test.host/cities/1]
+  [4;35;1mCity Load (0.000387)[0m   [0mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+
+
+Processing CitiesController#update (for 0.0.0.0 at 2008-01-27 18:45:06) [PUT]
+  Session ID: 
+  Parameters: {"city"=>{}, "action"=>"update", "id"=>"1", "controller"=>"cities"}
+  [4;36;1mCity Load (0.000365)[0m   [0;1mSELECT * FROM cities WHERE (cities."id" = 1) [0m
+  [4;35;1mCity Update (0.000263)[0m   [0mUPDATE cities SET "created_at" = '2008-01-27 18:45:06', "name" = 'Eindhoven', "updated_at" = '2008-01-27 18:45:06' WHERE "id" = 1[0m
+Redirected to http://test.host/cities/1
+Completed in 0.00289 (346 reqs/sec) | DB: 0.00101 (35%) | 302 Found [http://test.host/cities/1?]
+  [4;36;1mSQL (0.000351)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+
+
+Processing FoodTypesController#create (for 0.0.0.0 at 2008-01-27 18:45:06) [POST]
+  Session ID: 
+  Parameters: {"action"=>"create", "controller"=>"food_types", "food_type"=>{}}
+  [4;35;1mFoodType Create (0.000293)[0m   [0mINSERT INTO food_types ("name", "updated_at", "created_at") VALUES('''NULL''', '2008-01-27 18:45:06', '2008-01-27 18:45:06')[0m
+Redirected to http://test.host/food_types/4
+Completed in 0.00709 (141 reqs/sec) | DB: 0.00064 (9%) | 302 Found [http://test.host/food_types?]
+  [4;36;1mSQL (0.000346)[0m   [0;1mSELECT count(*) AS count_all FROM food_types [0m
+  [4;35;1mSQL (0.000274)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+  [4;36;1mFoodType Load (0.000347)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#destroy (for 0.0.0.0 at 2008-01-27 18:45:06) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"1", "controller"=>"food_types"}
+  [4;35;1mFoodType Load (0.000369)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+  [4;36;1mFoodType Destroy (0.000198)[0m   [0;1m DELETE FROM food_types
+ WHERE "id" = 1
+[0m
+Redirected to http://test.host/food_types
+Completed in 0.00183 (546 reqs/sec) | DB: 0.00153 (83%) | 302 Found [http://test.host/food_types/1]
+  [4;35;1mSQL (0.000249)[0m   [0mSELECT count(*) AS count_all FROM food_types [0m
+  [4;36;1mFoodType Load (0.000394)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#edit (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"food_types"}
+  [4;35;1mFoodType Load (0.000361)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+Rendering template within layouts/food_types
+Rendering food_types/edit
+Completed in 0.00530 (188 reqs/sec) | Rendering: 0.00438 (82%) | DB: 0.00100 (18%) | 200 OK [http://test.host/food_types/1/edit]
+
+
+Processing FoodTypesController#index (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000701)[0m   [0;1mSELECT * FROM food_types [0m
+Rendering template within layouts/food_types
+Rendering food_types/index
+Completed in 0.00488 (205 reqs/sec) | Rendering: 0.00320 (65%) | DB: 0.00070 (14%) | 200 OK [http://test.host/food_types]
+
+
+Processing FoodTypesController#new (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"food_types"}
+Rendering template within layouts/food_types
+Rendering food_types/new
+Completed in 0.00348 (287 reqs/sec) | Rendering: 0.00292 (83%) | DB: 0.00000 (0%) | 200 OK [http://test.host/food_types/new]
+  [4;35;1mFoodType Load (0.000497)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#show (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"food_types"}
+  [4;36;1mFoodType Load (0.000367)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+Rendering template within layouts/food_types
+Rendering food_types/show
+Completed in 0.00294 (339 reqs/sec) | Rendering: 0.00172 (58%) | DB: 0.00086 (29%) | 200 OK [http://test.host/food_types/1]
+  [4;35;1mFoodType Load (0.000381)[0m   [0mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+
+
+Processing FoodTypesController#update (for 0.0.0.0 at 2008-01-27 18:45:06) [PUT]
+  Session ID: 
+  Parameters: {"action"=>"update", "id"=>"1", "controller"=>"food_types", "food_type"=>{}}
+  [4;36;1mFoodType Load (0.000361)[0m   [0;1mSELECT * FROM food_types WHERE (food_types."id" = 1) [0m
+  [4;35;1mFoodType Update (0.000238)[0m   [0mUPDATE food_types SET "created_at" = '2008-01-27 18:45:06', "name" = 'Indonesisch', "updated_at" = '2008-01-27 18:45:06' WHERE "id" = 1[0m
+Redirected to http://test.host/food_types/1
+Completed in 0.00285 (351 reqs/sec) | DB: 0.00098 (34%) | 302 Found [http://test.host/food_types/1?]
+  [4;36;1mSQL (0.000325)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+
+
+Processing RestaurantsController#create (for 0.0.0.0 at 2008-01-27 18:45:06) [POST]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"create", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Create (0.000309)[0m   [0mINSERT INTO restaurants ("name", "rating", "updated_at", "city_id", "food_type_id", "created_at", "pricing") VALUES('''NULL''', 0, '2008-01-27 18:45:06', 0, 0, '2008-01-27 18:45:06', 0)[0m
+Redirected to http://test.host/restaurants/812724245
+Completed in 0.00812 (123 reqs/sec) | DB: 0.00063 (7%) | 302 Found [http://test.host/restaurants?]
+  [4;36;1mSQL (0.000280)[0m   [0;1mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;35;1mSQL (0.000277)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mRestaurant Load (0.000497)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#destroy (for 0.0.0.0 at 2008-01-27 18:45:06) [DELETE]
+  Session ID: 
+  Parameters: {"action"=>"destroy", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000499)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+  [4;36;1mRestaurant Destroy (0.000197)[0m   [0;1m DELETE FROM restaurants
+ WHERE "id" = 812724244
+[0m
+Redirected to http://test.host/restaurants
+Completed in 0.00199 (503 reqs/sec) | DB: 0.00175 (88%) | 302 Found [http://test.host/restaurants/812724244]
+  [4;35;1mSQL (0.000246)[0m   [0mSELECT count(*) AS count_all FROM restaurants [0m
+  [4;36;1mRestaurant Load (0.000524)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#edit (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"edit", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;35;1mRestaurant Load (0.000513)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/edit
+  [4;36;1mFoodType Load (0.000766)[0m   [0;1mSELECT * FROM food_types [0m
+  [4;35;1mCity Load (0.000513)[0m   [0mSELECT * FROM cities [0m
+Completed in 0.00955 (104 reqs/sec) | Rendering: 0.00716 (74%) | DB: 0.00256 (26%) | 200 OK [http://test.host/restaurants/812724244/edit]
+
+
+Processing RestaurantsController#index (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"index", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000800)[0m   [0;1mSELECT * FROM restaurants [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/index
+Completed in 0.00527 (189 reqs/sec) | Rendering: 0.00351 (66%) | DB: 0.00080 (15%) | 200 OK [http://test.host/restaurants]
+
+
+Processing RestaurantsController#new (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"new", "controller"=>"restaurants"}
+Rendering template within layouts/restaurants
+Rendering restaurants/new
+  [4;35;1mFoodType Load (0.000790)[0m   [0mSELECT * FROM food_types [0m
+  [4;36;1mCity Load (0.000532)[0m   [0;1mSELECT * FROM cities [0m
+Completed in 0.00809 (123 reqs/sec) | Rendering: 0.00617 (76%) | DB: 0.00132 (16%) | 200 OK [http://test.host/restaurants/new]
+  [4;35;1mRestaurant Load (0.000542)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#show (for 0.0.0.0 at 2008-01-27 18:45:06) [GET]
+  Session ID: 
+  Parameters: {"action"=>"show", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000528)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+Rendering template within layouts/restaurants
+Rendering restaurants/show
+Completed in 0.00405 (246 reqs/sec) | Rendering: 0.00256 (63%) | DB: 0.00107 (26%) | 200 OK [http://test.host/restaurants/812724244]
+  [4;35;1mRestaurant Load (0.000537)[0m   [0mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+
+
+Processing RestaurantsController#update (for 0.0.0.0 at 2008-01-27 18:45:06) [PUT]
+  Session ID: 
+  Parameters: {"restaurant"=>{}, "action"=>"update", "id"=>"812724244", "controller"=>"restaurants"}
+  [4;36;1mRestaurant Load (0.000506)[0m   [0;1mSELECT * FROM restaurants WHERE (restaurants."id" = 812724244) [0m
+  [4;35;1mRestaurant Update (0.000256)[0m   [0mUPDATE restaurants SET "created_at" = '2008-01-27 18:45:06', "city_id" = 1, "name" = 'Javaans Eetcafe', "food_type_id" = 1, "rating" = 4, "pricing" = 2, "updated_at" = '2008-01-27 18:45:06' WHERE "id" = 812724244[0m
+Redirected to http://test.host/restaurants/812724244
+Completed in 0.00329 (303 reqs/sec) | DB: 0.00130 (39%) | 302 Found [http://test.host/restaurants/812724244?]

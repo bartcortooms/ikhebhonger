@@ -1,0 +1,85 @@
+#!/usr/bin/env /hosting/home/hiccup/www/eten.hiccup.nl/script/runner
+
+require 'hpricot'
+require 'open-uri'
+require 'cgi'
+require 'net/http'
+
+PRICING_TYPES = {
+	'Goedkoop' => 1,
+	'Gemiddeld' => 2,
+	'Boven gemiddeld' => 3,
+	'Luxe' => 4,
+}
+
+def get_details(url)
+	url_params  = CGI::parse(url)
+	puts "url: #{url}"
+	url = "http://rotterdam.vorkje.nl#{url}"
+	filename = "/hosting/home/hiccup/cache/#{url_params['restaurant_id']}.html"
+
+	# Cache the HTML page, if not already cached
+	if not FileTest.exists?(filename)
+		puts "Fetching #{url}"
+		open(url) do |page|
+			File.open(filename, 'w') do |f|
+				page.each_line { |line| f << line }
+			end
+		end
+		sleep 1 # Give the webserver a break
+	end
+
+	detail_page = Hpricot(open(url))
+	details = detail_page.search("//td[@class='title']/../../tr/td")
+	telephone = nil
+	address_lines = details[2].inner_html.split(/<br ?\/?>/)
+	address_lines.each do |line|
+		telephone = line.sub(/^[^0-9]+/, '') if line =~ /tel/i
+	end
+	address = address_lines[0].strip
+	homepage = details[6].at("/a") ? details[6].at("/a")[:href] : ""
+	[homepage, address, telephone]
+end
+
+listing = Hpricot(open(
+'http://rotterdam.vorkje.nl/view.cfm?template=zoekres&website_id=143&ref_page_id=1836&action=result'
+))
+listing.search("//tr[@class='row_even'] | //tr[@class='row_odd']").each do |tr|
+	next if tr.at("td/a/font")
+
+	name = tr.at("td/a[@href]").inner_html
+
+	(url, cityname, food, pricing, rating) = tr.search("/td").collect do |td|
+		td.inner_html.strip
+	end
+
+	cityname = "Rotterdam"
+
+	if not (city = City.find(:first, :conditions => ["name = ?", cityname]))
+		city = City.new(:name => cityname)
+		city.save
+	end
+
+	if not (food_type = FoodType.find(:first, :conditions => ["name = ?", food]))
+		food_type = FoodType.new(:name => food)
+		food_type.save
+	end
+
+	restaurant = Restaurant.new(
+		:name => name,
+		:city_id => city.id,
+		:pricing => PRICING_TYPES[pricing],
+		:food_type_id => food_type.id,
+		:rating => rating.to_f
+	)
+
+	detail_url = tr.at("td/a[@href]")[:href]
+	(homepage, address, telephone) = get_details(detail_url)
+	restaurant.homepage = homepage
+	restaurant.address = address
+	(restaurant.lat, restaurant.lon) = restaurant.fetch_geocoordinates
+
+	if restaurant.save
+		puts "#{restaurant.name} added"
+	end
+end

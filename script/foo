@@ -1,0 +1,6 @@
+#!/usr/bin/env /hosting/home/hiccup/www/eten.hiccup.nl/script/runner
+
+c = City.find(80)
+c.restaurants.each do |r|
+	puts r.name
+end
